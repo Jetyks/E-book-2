@@ -1,0 +1,27 @@
+.nav-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    border: 1.3px solid black;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.nav-icon-container:hover{
+    cursor: pointer;
+}
+
+.nav-icon-container img{
+    height: 60%;
+    
+    /* border: 2px solid blue; */
+    /* width: 50%; */
+}
+
+.selected-icon{
+    background-color: #2f4858;
+    background-color: #474838;
+    background-color: #987d50;
+}

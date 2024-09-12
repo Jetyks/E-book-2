@@ -1,0 +1,25 @@
+:root {
+    --clr-light-yellow: #dddfc681;
+    --clr-gray: #acac9a;
+    --secundary-color: #acac9a;
+    /* --clr-purple: rgb(106, 74, 220);
+    --clr-dark-purple: rgb(88, 60, 187);
+    --clr-cyan: #4bd2e473; */
+    
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: var(--clr-light-yellow);
+}
+
+input{
+    font-family: "Exo 2", sans-serif;
+}

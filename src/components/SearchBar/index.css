@@ -1,0 +1,28 @@
+.input-container{
+    position: absolute;
+    left: 120px;
+    display: flex;
+    gap: 0 10px;
+   /*  border: 1px solid black; */
+    border-radius: 12px;
+    width: 50%;
+    height: 5%;
+}
+
+.icon-container{
+    display: flex;
+    align-items: center;
+}
+
+.icon-search{
+   /*  background-color: red; */
+    height: 80%;
+    margin-left: 10px;
+}
+
+.input-search{
+    all: unset;
+    color: var(--clr-gray);
+    font-family: "Exo 2";
+    font-style: italic;
+}

@@ -1,0 +1,31 @@
+.sliding-books-container{
+    display: flex;
+    margin-left: -25px;
+   /*  gap: 10px; */
+   /* justify-content: space-around; */
+    gap: 90px;
+    align-items: center;
+    height: 100%;
+    /* overflow: hidden; */
+    /* border: 1px solid black; */
+
+}
+
+.swiper-books{
+    height: 100%;
+   /*  background-color: rgba(77, 220, 220, 0.484); */
+
+}
+
+.swiper-slide-book{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    height: 100%;
+    width: 13rem;
+    /* background-color: rgba(209, 24, 24, 0.475); */
+    /* border: 2px solid rgb(190, 9, 9); */
+    cursor: pointer;
+    transition: 0.30s;
+}

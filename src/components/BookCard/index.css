@@ -1,0 +1,118 @@
+.card-div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 13rem;
+    /* margin: 0 !important; */
+    justify-content: center;
+    /* background-color: rgba(209, 24, 24, 0.475); */
+    /* border: 2px solid gray; */
+    cursor: pointer;
+    transition: 0.30s;
+}
+.card-div:hover{
+    transform: scale(1.1);
+    /* border: 1.3px solid var(--clr-cyan); */
+}
+.first-card-div{
+    margin-left: 23px;
+}
+
+.last-card-div{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 13rem;
+   /*  border: 2px solid gray; */
+    /* cursor: pointer; */
+}
+
+.book-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    /* background-color: green; */
+}
+
+.book-img{
+    height: 90%;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: -19px 10px 18px -10px var(--secundary-color);
+    transition: 0.30s;
+}
+.book-img:hover{
+    box-shadow:  -16px 9px 38px -12px var(--secundary-color);
+    /* transform: scale(1.2); */
+}
+
+/* .last-book-img{
+    max-height: 100%;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: -19px 10px 18px -10px var(--secundary-color);
+} */
+
+.book-title-container{
+    margin-top: 6px;
+    height: 10%;
+    /* background-color: rgba(255, 192, 203, 0.767); */
+}
+.book-title-container h3{
+    font-size: 13px;
+    font-family: "Exo 2";
+    font-weight: 500;
+    text-align: center;
+    height: 100%;
+}
+
+.book-autor-container{
+    height: 10%;
+}
+.book-autor{
+    font-family: "Exo 2";
+    font-weight: 500;
+    font-style: italic;
+    /* background-color: rgba(0, 255, 255, 0.68); */
+    text-align: center;
+}
+
+.swiper-button-next {
+    background-image: url('/src/assets/img/arrow-next.svg'); /* Usa tu propia imagen */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Flecha izquierda personalizada */
+  .swiper-button-prev {
+    background-image: url('/src/assets/img/arrow-prev.svg'); /* Usa tu propia imagen */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+  }
+
+  .swiper-button-prev {
+    top: 40%;
+    left: 0;
+    opacity: 0.7;
+ }
+  .swiper-button-next {
+     top: 40%;
+     right: 0;
+     opacity: 0.7;
+  }
+  
+  /* Ocultar el contenido de las flechas predeterminadas */
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: none; /* Esconder el ícono predeterminado */
+  }
+
+
