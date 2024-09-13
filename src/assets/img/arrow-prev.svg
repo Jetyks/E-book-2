@@ -1,9 +1,9 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+<svg width="800px" height="800px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="SVGRepo_bgCarrier" stroke-width="0">
-<rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#947b51" strokewidth="0"/>
+<rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#8da683" strokewidth="0"/>
 </g>
 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M20 12.75C20.4142 12.75 20.75 12.4142 20.75 12C20.75 11.5858 20.4142 11.25 20 11.25V12.75ZM20 11.25H4V12.75H20V11.25Z" fill="#ffffff"/> <path d="M10 6L4 12L10 18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g>
+<g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M20 12.75C20.4142 12.75 20.75 12.4142 20.75 12C20.75 11.5858 20.4142 11.25 20 11.25V12.75ZM20 11.25H4V12.75H20V11.25Z" fill="#fef9f0"/> <path d="M10 6L4 12L10 18" stroke="#fef9f0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g>
 </svg>

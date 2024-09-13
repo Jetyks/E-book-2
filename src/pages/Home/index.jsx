@@ -18,14 +18,18 @@ function Home () {
   }, [])
 
   return (
-    <div className="home-container">
-      <h2 className="greeting-text">Hi, Carlos</h2>
-      <p className="second-greeting-text">What would you like to read today?</p>
-      {/* Pasamos los libros a SlidingBooks */}
-      <div className="sliding-books-home">
-        <SlidingBooks books={books} />
+    <>
+      <div className="half-background"></div>
+      <div className="home-container">
+        <h2 className="greeting-text">Hi, Carlos</h2>
+        <p className="second-greeting-text">What would you like to read today?</p>
+        {/* Pasamos los libros a SlidingBooks */}
+        <div className="sliding-books-home">
+          <SlidingBooks books={books} />
+        </div>
       </div>
-    </div>
+    </>
+
   )
 }
 

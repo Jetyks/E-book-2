@@ -21,7 +21,9 @@
 }
 
 .selected-icon{
-    background-color: #2f4858;
-    background-color: #474838;
     background-color: #987d50;
+    background-color: #008c8a;
+    background-color: #d99d29;
+    background-color: #8da683;
+    border: none;
 }

@@ -6,7 +6,7 @@ import 'swiper/css/navigation' // Importar el estilo de navegación
 import { BookCard } from '../BookCard' // Importar el componente BookCard
 import { Navigation, Pagination } from 'swiper/modules'// Importar módulos necesarios
 
-const SlidingBooks = ({ books }) => {
+const SlidingBooks = ({ books, onSlideChange }) => {
   return (
     <div className="sliding-books-container">
       <Swiper
@@ -18,6 +18,7 @@ const SlidingBooks = ({ books }) => {
         speed={900}
         loop={true}
         navigation
+        onSlideChange={onSlideChange}
       >
         {
           books.slice(0, 15).map((book, index, array) => {
@@ -28,7 +29,7 @@ const SlidingBooks = ({ books }) => {
                   <BookCard
                     img={book.volumeInfo.imageLinks?.thumbnail}
                     titulo={book.volumeInfo.title}
-                    autor={book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown Author'}
+                    autor={book.volumeInfo.authors ? book.volumeInfo.authors : 'Unknown Author'}
                     isLast={isLast}
                     isFirst={isFirst}
                   />

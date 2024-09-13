@@ -2,6 +2,8 @@
     --clr-light-yellow: #dddfc681;
     --clr-gray: #acac9a;
     --secundary-color: #acac9a;
+    --clr-brown: #967b4b;
+    --clr-soft-white: #efe2e6;
     /* --clr-purple: rgb(106, 74, 220);
     --clr-dark-purple: rgb(88, 60, 187);
     --clr-cyan: #4bd2e473; */
@@ -17,7 +19,8 @@
 }
 
 html{
-    background-color: var(--clr-light-yellow);
+    /* background-color: var(--clr-light-yellow); */
+    background-color: whitesmoke;
 }
 
 input{

@@ -14,6 +14,9 @@
     transform: scale(1.1);
     /* border: 1.3px solid var(--clr-cyan); */
 }
+.card-div:hover .book-img{
+    box-shadow:  -19px 9px 26px -12px rgba(43, 43, 43, 0.863);
+}
 .first-card-div{
     margin-left: 23px;
 }
@@ -40,13 +43,12 @@
     height: 90%;
     width: auto;
     border-radius: 4px;
-    box-shadow: -19px 10px 18px -10px var(--secundary-color);
+    box-shadow: -19px 10px 21px -10px rgba(43, 43, 43, 0.863);
     transition: 0.30s;
 }
-.book-img:hover{
-    box-shadow:  -16px 9px 38px -12px var(--secundary-color);
-    /* transform: scale(1.2); */
-}
+/* .book-img:hover{
+    box-shadow:  -19px 9px 26px -12px rgba(43, 43, 43, 0.863);
+} */
 
 /* .last-book-img{
     max-height: 100%;
@@ -56,36 +58,45 @@
 } */
 
 .book-title-container{
-    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 6px; */
     height: 10%;
-    /* background-color: rgba(255, 192, 203, 0.767); */
+    width: auto;
+    /* color: #ffe4e6;
+    background-color: #8c428e; */
+    color: black;
+    /* background-color: #ffe4e696; */
+    overflow: hidden;
+    
 }
 .book-title-container h3{
-    font-size: 13px;
-    font-family: "Exo 2";
-    font-weight: 500;
+    font-size: 15px;
+    font-family: "Fira Sans", "Exo 2";
+    font-weight: 400;
     text-align: center;
     height: 100%;
 }
 
-.book-autor-container{
+/* .book-autor-container{
     height: 10%;
 }
 .book-autor{
     font-family: "Exo 2";
     font-weight: 500;
     font-style: italic;
-    /* background-color: rgba(0, 255, 255, 0.68); */
+    background-color: rgba(0, 255, 255, 0.68);
     text-align: center;
-}
+} */
 
 .swiper-button-next {
     background-image: url('/src/assets/img/arrow-next.svg'); /* Usa tu propia imagen */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
   
   /* Flecha izquierda personalizada */
@@ -94,19 +105,19 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
 
   .swiper-button-prev {
-    top: 40%;
+    top: 48%;
     left: 0;
-    opacity: 0.7;
+    /* opacity: 0.9; */
  }
   .swiper-button-next {
-     top: 40%;
+     top: 48%;
      right: 0;
-     opacity: 0.7;
+    /*  opacity: 0.9; */
   }
   
   /* Ocultar el contenido de las flechas predeterminadas */
