@@ -20,9 +20,14 @@
 
 html{
     /* background-color: var(--clr-light-yellow); */
-    background-color: whitesmoke;
+    background-color: #fef9f0;
 }
 
 input{
     font-family: "Exo 2", sans-serif;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: "Fira Sans", sans-serif;
+    color: #1e1401;
 }

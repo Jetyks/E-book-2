@@ -11,16 +11,16 @@ import bookMarkWhite from '../../assets/img/bookmark-2-white.png'
 import { NavCircleItem } from '../NavCircleItem'
 
 function Menu () {
-  const location = useLocation();
+  const location = useLocation()
   const [selectedIcon, setIsSelectedIcon] = useState('')
   const handleIconClick = (iconNumber) => {
     setIsSelectedIcon(iconNumber)
   }
-   const [icons, setIcons] = useState({
+  const [icons, setIcons] = useState({
     home: homeIcon2,
     bookmark: bookMark,
     settings: settingsIcon
-  });
+  })
 
   useEffect(() => {
     // Este efecto se ejecuta cada vez que 'selected' cambie.
@@ -30,32 +30,32 @@ function Menu () {
           home: homeIcon2White, // Cambiar a blanco
           bookmark: bookMark,
           settings: settingsIcon
-        });
-        setIsSelectedIcon('icon1');
-        break;
+        })
+        setIsSelectedIcon('icon1')
+        break
       case '/my-books':
         setIcons({
           home: homeIcon2,
           bookmark: bookMarkWhite, // Cambiar a blanco
           settings: settingsIcon
-        });
-        setIsSelectedIcon('icon2');
-        break;
+        })
+        setIsSelectedIcon('icon2')
+        break
       case '/settings':
         setIcons({
           home: homeIcon2,
           bookmark: bookMark,
           settings: settingsIconWhite // Cambiar a blanco
-        });
-        setIsSelectedIcon('icon3');
-        break;
+        })
+        setIsSelectedIcon('icon3')
+        break
       default:
         setIcons({
           home: homeIcon2,
           bookmark: bookMark,
           settings: settingsIcon
-        });
-        break;
+        })
+        break
     }
 
     // Aquí podrías realizar otras acciones como aplicar estilos, hacer fetch a una API, etc.

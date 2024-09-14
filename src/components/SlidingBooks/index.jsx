@@ -27,6 +27,7 @@ const SlidingBooks = ({ books, onSlideChange }) => {
             return (
                 <SwiperSlide key={book.id} className='swiper-slide-book'>
                   <BookCard
+                    id={book.id}
                     img={book.volumeInfo.imageLinks?.thumbnail}
                     titulo={book.volumeInfo.title}
                     autor={book.volumeInfo.authors ? book.volumeInfo.authors : 'Unknown Author'}

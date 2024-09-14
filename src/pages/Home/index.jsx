@@ -21,7 +21,7 @@ function Home () {
     <>
       <div className="half-background"></div>
       <div className="home-container">
-        <h2 className="greeting-text">Hi, Carlos</h2>
+        <h2 className="greeting-text">Hello, Carlos</h2>
         <p className="second-greeting-text">What would you like to read today?</p>
         {/* Pasamos los libros a SlidingBooks */}
         <div className="sliding-books-home">

@@ -1,0 +1,67 @@
+.book-details-container{
+    position: relative;
+    margin-left: 160px;
+    margin-right: 70px;
+    display: flex;
+    justify-content: center;
+    height: 640px;
+    border: 1px solid gray;
+    /* background-color: rgba(175, 238, 238, 0.674); */
+}
+
+.book-details-img-container{
+    background-color: rgba(137, 43, 226, 0.564);
+    position: absolute;
+    z-index: 100;
+    top: 65px;
+    height: 350px;
+    right: 57.5%;
+    /* width: 210px; */
+}
+.book-details-img-container img{
+    height: 100%;
+    box-shadow: -19px 10px 21px -10px rgba(43, 43, 43, 0.863);
+    /* width: 100%; */
+   /*  opacity: 0.4; */
+}
+.book-title-container-bd{
+    position: absolute;
+    min-height: 100px;
+    max-height: 130px;
+    width: 360px;
+    top: 82px;
+    right: 16%;
+    color: #1e1401;
+    border: 2px solid rgb(107, 56, 56);
+
+}
+
+.book-title-bd{
+    white-space: normal; /* Permite saltos de línea */
+    overflow-wrap: break-word; /* Permite que las palabras largas se dividan */
+    word-break: break-word; /* Si es necesario, divide las palabras largas */
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.book-info-container{
+    position: absolute;
+    /* height: 360px; */
+    height: 60%;
+    width: 100%;
+    top: 49%;
+    /* background-color: #f2dcb1; */
+    background-color: white;
+}
+
+.book-info{
+    height: 100%;
+    width: 100%;
+    margin-top: 110px;
+    border: 1.3px solid gray;
+    padding: 50px 100px;
+}
+.book-info h4{
+    font-weight: 500;
+    font-size: 18px;
+}
