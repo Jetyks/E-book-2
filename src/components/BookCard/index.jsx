@@ -1,9 +1,9 @@
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import './index.css'
 
-const BookCard = ({ id, img, titulo, autor }) => {
+const BookCard = ({ id, img, title, author, description, country, language, publisher }) => {
   /* const autorTitle = `-${autor}-` */
-  const bookTitle = `"${titulo}"`
+  const bookTitle = `"${title}"`
   /* const classNameCard = isFirst
     ? 'first-card-div card-div'
     : 'card-div' */
@@ -20,9 +20,13 @@ const BookCard = ({ id, img, titulo, autor }) => {
     navigate(routeMoreInfo, {
       state: {
         bookId: id,
-        bookTitle: titulo,
+        bookTitle: title,
         bookImg: img,
-        bookAuthor: autor
+        bookAuthor: author,
+        bookDescription: description,
+        bookCountry: country,
+        bookLanguage: language,
+        bookPublisher: publisher
       }
     })
   }

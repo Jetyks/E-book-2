@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     height: 640px;
-    border: 1px solid gray;
+    /* border: 2px solid rgb(186, 49, 49); */
     /* background-color: rgba(175, 238, 238, 0.674); */
 }
 
@@ -24,13 +24,25 @@
     /* width: 100%; */
    /*  opacity: 0.4; */
 }
-.book-title-container-bd{
+
+.book-first-info-container{
     position: absolute;
-    min-height: 100px;
+    padding: 0 60px;
+    width: 595px;
+    height: 377px;
+    z-index: 200;
+    top: 82px;
+    right: 0;
+    border: 2px solid rgba(38, 199, 38, 0.927);
+}
+
+.book-title-container-bd{
+    min-height: 50px;
     max-height: 130px;
     width: 360px;
     top: 82px;
-    right: 16%;
+    /* right: 16%;
+    position: absolute; */
     color: #1e1401;
     border: 2px solid rgb(107, 56, 56);
 
@@ -41,13 +53,23 @@
     overflow-wrap: break-word; /* Permite que las palabras largas se dividan */
     word-break: break-word; /* Si es necesario, divide las palabras largas */
     font-size: 35px;
-    font-weight: 400;
+    /* font-size: 15px; */
+    font-weight: 500;
+}
+
+.book-author-container{
+    margin-top: 10px;
+    background-color: rgba(26, 215, 152, 0.619);
+
+}
+.book-author-container h3{
+   font-weight: 500;
 }
 
 .book-info-container{
     position: absolute;
     /* height: 360px; */
-    height: 60%;
+    height: 650px;
     width: 100%;
     top: 49%;
     /* background-color: #f2dcb1; */
@@ -55,13 +77,73 @@
 }
 
 .book-info{
-    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    /* height: 790px; */
+    height: 540px;
     width: 100%;
     margin-top: 110px;
-    border: 1.3px solid gray;
-    padding: 50px 100px;
+    /* background-color: rgba(210, 148, 41, 0.242); */
+    padding: 35px 100px;
 }
 .book-info h4{
-    font-weight: 500;
+    font-family: "Fira Sans", "Exo 2";
+    font-weight: 450;
     font-size: 18px;
+}
+
+.book-description{
+    padding-top: 20px;
+    background-color: rgba(143, 104, 179, 0.795);
+    grid-column: 1/5;
+    grid-row: 1/15;
+}
+.book-description p{
+    margin-top: 13px;
+    font-family: "Fira Sans", "Exo 2";
+    font-weight: 400;
+}
+
+.publisher-container{
+    padding-top: 20px;
+    background-color: rgba(74, 171, 188, 0.719);
+    grid-column: 5/8;
+    grid-row: 1/5;
+}
+.publisher-container p{
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: "Fira Sans", "Exo 2";
+    font-weight: 400;
+}
+
+.language-container{
+    padding-top: 20px;
+    background-color: rgba(172, 223, 96, 0.705);
+    grid-column: 5/8;
+    grid-row: 5/9;
+}
+.language-container p{
+    font-size: 30px;
+    margin-top: 13px;
+    font-family: "Fira Sans", "Exo 2";
+    font-weight: 350;
+}
+
+.country-container{
+    padding-top: 20px;
+    background-color: rgba(14, 181, 70, 0.705);
+    grid-column: 5/8;
+    grid-row: 9/13;
+}
+.country-container p{
+    font-size: 30px;
+    margin-top: 13px;
+    font-family: "Fira Sans", "Exo 2";
+    font-weight: 350;
+}
+
+.publisher-container, .country-container, .language-container{
+    padding-left: 45px;
 }
