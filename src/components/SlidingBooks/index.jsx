@@ -32,8 +32,8 @@ const SlidingBooks = ({ books, onSlideChange }) => {
                     img={book.volumeInfo.imageLinks?.thumbnail}
                     title={book.volumeInfo.title}
                     author={author}
-                    description={book.volumeInfo.description}
-                    country={book.saleInfo.country ? book.saleInfo.country : 'Description not available'}
+                    description={book.volumeInfo.description ? book.volumeInfo.description : 'Description not provided'}
+                    country={book.saleInfo.country ? book.saleInfo.country : 'Not provided'}
                     language={book.volumeInfo.language}
                     publisher={book.volumeInfo.publisher ? book.volumeInfo.publisher : 'Not provided'}
                     isLast={isLast}

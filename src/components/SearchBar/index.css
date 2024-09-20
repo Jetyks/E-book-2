@@ -4,11 +4,9 @@
     display: flex;
     gap: 0 10px;
     /* border: 1.6px solid #8da683; */
-    /* background-color: #588780; */
-    /* opacity: 0.5; */
-    /* border-radius: 12px; */
     width: 33%;
     height: 5%;
+    z-index: 400;
 }
 
 .icon-container{
@@ -17,14 +15,12 @@
 }
 
 .icon-search{
-   /*  background-color: red; */
     height: 80%;
     margin-left: 10px;
 }
 
 .input-search{
     all: unset;
-   /*  color: var(--clr-gray); */
     color: #588780;
     font-family: "Exo 2";
     font-style: italic;
