@@ -19,13 +19,17 @@ const BookCardSR = ({ id, img, title, author, description, country, language, pu
       }
     })
   }
+
+  const truncateTitle = (title, maxLength = 35) => {
+    return title.length > maxLength ? title.slice(0, maxLength) + '...' : title
+  }
   return (
       <div className='card-sr-container' onClick={handleCardClick}>
          <div className="book-img-sr-container">
             <img className='book-sr-img' src={img} alt="book-img"/>
          </div>
          <div className='book-title-sr-container'>
-            <h3 className='book-sr-title'> {bookTitle}</h3>
+            <h3 className='book-sr-title'> {truncateTitle(bookTitle)}</h3>
          </div>
       </div>
   )

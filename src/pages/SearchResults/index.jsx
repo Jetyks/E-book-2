@@ -1,9 +1,9 @@
 import './index.css'
 import { ListCard } from '../../components/ListCard'
-import { BookCard } from '../../components/BookCard'
 import { useContext } from 'react'
 import { useBooksContext } from '../../hooks/useBooksContext'
 import { BookCardSR } from '../../components/BookCardSR'
+import defaultBook from '../../assets/img/default-book-img.png'
 
 function SearchResults () {
   const { filteredBooks } = useBooksContext()
@@ -17,11 +17,12 @@ function SearchResults () {
                 {
                     filteredBooks.map((book, index, array) => {
                       const author = book.volumeInfo.authors ? book.volumeInfo.authors[0] : 'Unknown Author'
+                      const thumbnail = book.volumeInfo.imageLinks?.thumbnail || defaultBook
                       return (
                             <BookCardSR
                             key={book.id}
                             id={book.id}
-                            img={book.volumeInfo.imageLinks?.thumbnail}
+                            img={thumbnail}
                             title={book.volumeInfo.title}
                             author={author}
                             description={book.volumeInfo.description ? book.volumeInfo.description : 'Description not provided'}

@@ -2,12 +2,9 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* width: 100%; */
-    /* width: 13rem; */
-    /* margin: 0 !important; */
     justify-content: center;
-    /* background-color: rgba(209, 24, 24, 0.475); */
-    border: 2px solid gray;
+    align-items: center;
+    /* border: 2px solid gray; */
     cursor: pointer;
     transition: 0.30s;
 }
@@ -33,7 +30,7 @@
     border-radius: 4px;
     box-shadow: -19px 10px 21px -10px rgba(43, 43, 43, 0.863);
     transition: 0.30s;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .book-title-sr-container{
@@ -41,10 +38,11 @@
     align-items: center;
     justify-content: center;
     height: 15%;
-    width: auto;
+    width: 75%;
+    /* width: auto; */
     color: black;
-    background-color: #ffe4e696;
     overflow: hidden;
+    border: 1px solid rgba(128, 99, 99, 0.945);
     
 }
 .book-title-sr-container h3{
