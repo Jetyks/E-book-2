@@ -44,6 +44,7 @@
     /* right: 16%;
     position: absolute; */
     color: #1e1401;
+    overflow-y: scroll;
     /* border: 2px solid rgb(107, 56, 56); */
 
 }
@@ -94,9 +95,9 @@
     bottom: 10px;
     height: 40px;
     width: 130px;
-    border-radius: 21px;
-    /* background-color: #1e1401; */
+    border-radius: 2px;
     background-color: #324b4c;
+    cursor: pointer;
 }
 .category-container h3{
     color: white;

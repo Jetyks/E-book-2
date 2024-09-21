@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react'
 /* import { BookCard } from '../../components/BookCard' */
 import { SlidingBooks } from '../../components/SlidingBooks'
 import './index.css'
-import { getBooks } from '../../services/books'
+import { getHomeBooks } from '../../services/books'
 
 function Home () {
   const [books, setBooks] = useState([])
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const data = await getBooks()
+      const data = await getHomeBooks()
       if (data && data.items) {
         setBooks(data.items)
       }
