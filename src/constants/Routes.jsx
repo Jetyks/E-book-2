@@ -3,6 +3,8 @@ import { Home } from '../pages/Home'
 import { SavedBooks } from '../pages/SavedBooks'
 import { Settings } from '../pages/Settings'
 import { NotFound } from '../pages/NotFound'
+import { SearchResults } from '../pages/SearchResults'
+
 import { BookDetails } from '../pages/BookDetails'
 
 const Routes = () => {
@@ -22,6 +24,10 @@ const Routes = () => {
     {
       path: 'book-details/:id',
       element: <BookDetails/>
+    },
+    {
+      path: 'search-results',
+      element: <SearchResults/>
     },
     {
       path: '*',

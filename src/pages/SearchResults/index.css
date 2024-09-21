@@ -1,0 +1,9 @@
+
+.search-results-container{
+    margin-left: 130px;
+    top: 60px;
+    position: relative;
+    margin-top: 12px;
+   /*  height: 540px; */
+    border: 2px solid gray;
+}
