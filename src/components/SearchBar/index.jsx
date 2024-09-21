@@ -16,7 +16,9 @@ const SearchBar = () => {
       navigate('search-results')
     }
   }
-  console.log(searchTerm)
+  /* if (searchTerm) {
+    console.log(searchTerm)
+  } */
 
   return (
     <div className='input-container'>

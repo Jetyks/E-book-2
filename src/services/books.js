@@ -27,7 +27,7 @@ const findBooks = async (searchTerm) => {
     return [] // Si el término de búsqueda está vacío o sólo contiene espacios, devolvemos un array vacío.
   }
 
-  const searchUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchTerm)}&maxResults=15`
+  const searchUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchTerm)}&maxResults=30`
 
   try {
     const response = await fetch(searchUrl)

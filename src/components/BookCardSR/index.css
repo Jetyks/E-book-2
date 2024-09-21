@@ -1,0 +1,56 @@
+.card-sr-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* width: 100%; */
+    /* width: 13rem; */
+    /* margin: 0 !important; */
+    justify-content: center;
+    /* background-color: rgba(209, 24, 24, 0.475); */
+    border: 2px solid gray;
+    cursor: pointer;
+    transition: 0.30s;
+}
+/* .card-sr-container:hover{
+    transform: scale(1.05);
+} */
+.card-sr-container:hover .book-img{
+    box-shadow:  -19px 9px 26px -12px rgba(43, 43, 43, 0.863);
+}
+
+.book-img-sr-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+    /* background-color: green; */
+}
+
+.book-sr-img{
+    height: 90%;
+    max-width: 75%;
+    border-radius: 4px;
+    box-shadow: -19px 10px 21px -10px rgba(43, 43, 43, 0.863);
+    transition: 0.30s;
+    border: 2px solid red;
+}
+
+.book-title-sr-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    width: auto;
+    color: black;
+    background-color: #ffe4e696;
+    overflow: hidden;
+    
+}
+.book-title-sr-container h3{
+    font-size: 15px;
+    font-family: "Fira Sans", "Exo 2";
+    font-weight: 400;
+    text-align: center;
+    height: 100%;
+}

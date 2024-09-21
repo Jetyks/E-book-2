@@ -20,17 +20,26 @@ const BooksProvider = ({ children }) => {
       }
     }
 
-    fetchBooks()
-  }, [])
+    if (location.pathname === '/') {
+      fetchBooks()
+    }
+  }, [location.pathname])
 
   const searchBooks = async (searchTerm) => {
+    if (!searchTerm || searchTerm.trim() === '') {
+      console.log('El término de búsqueda está vacío.')
+      return
+    }
+
     setLoading(true)
     const booksData = await findBooks(searchTerm)
     setBooks(booksData)
     setFilteredBooks(booksData)
     setLoading(false)
   }
-
+  if (filteredBooks.length > 0) {
+    console.log('Respuesta:', filteredBooks)
+  }
   return (
     <BooksContext.Provider value={{ books, filteredBooks, searchBooks, loading }}>
       {children}
