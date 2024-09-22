@@ -6,11 +6,12 @@ import { BookCardSR } from '../../components/BookCardSR'
 import defaultBook from '../../assets/img/default-book-img.png'
 
 function SearchResults () {
-  const { filteredBooks } = useBooksContext()
+  const { filteredBooks, searchTerm } = useBooksContext()
+  const searchTermText = `"${searchTerm}"`
   return (
       <>
         <div className='result-text-container'>
-          <h2>Results for: {/* {searchTerm} */}</h2>
+          <h2>Results for: <span className='search-term-sr'>{searchTermText}</span></h2>
         </div>
         <div className="search-results-container">
             <ListCard>

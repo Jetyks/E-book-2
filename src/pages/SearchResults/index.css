@@ -3,6 +3,9 @@
     top: 55px;
     left: 140px;
 }
+.search-term-sr{
+    font-style: italic;
+}
 
 .search-results-container{
     margin-left: 130px;

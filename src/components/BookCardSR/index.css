@@ -45,10 +45,15 @@
     /* border: 1px solid rgba(128, 99, 99, 0.945); */
     
 }
-.book-title-sr-container h3{
+.book-sr-title{
     font-size: 15px;
     font-family: "Fira Sans", "Exo 2";
     font-weight: 400;
     text-align: center;
     height: 100%;
+}
+
+.book-sr-title:hover{
+    color: var(--clr-green);
+    color: #818383;
 }

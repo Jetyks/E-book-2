@@ -7,6 +7,7 @@ const BooksProvider = ({ children }) => {
   const [books, setBooks] = useState([]) // Estado para almacenar todos los libros
   const [filteredBooks, setFilteredBooks] = useState([])
   const [loading, setLoading] = useState(true)
+  const [searchTerm, setSearchTerm] = useState('')
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -30,7 +31,7 @@ const BooksProvider = ({ children }) => {
       console.log('El término de búsqueda está vacío.')
       return
     }
-
+    setSearchTerm(searchTerm)
     setLoading(true)
     const booksData = await findBooks(searchTerm)
     setBooks(booksData)
@@ -41,7 +42,7 @@ const BooksProvider = ({ children }) => {
     console.log('Respuesta:', filteredBooks)
   }
   return (
-    <BooksContext.Provider value={{ books, filteredBooks, searchBooks, loading }}>
+    <BooksContext.Provider value={{ books, filteredBooks, searchBooks, loading, searchTerm }}>
       {children}
     </BooksContext.Provider>
   )
