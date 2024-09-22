@@ -4,7 +4,7 @@ import './index.css'
 const BookCardSR = ({ id, img, title, author, description, country, language, publisher }) => {
   const bookTitle = `"${title}"`
   const navigate = useNavigate()
-  const routeMoreInfo = 'book-details/' + id
+  const routeMoreInfo = '/book-details/' + id
   const handleCardClick = () => {
     navigate(routeMoreInfo, {
       state: {

@@ -27,7 +27,7 @@ function BookDetails () {
                 <div className="book-info">
                     <div className="book-description">
                         <h4>Description:</h4>
-                        <p>{bookDescription}</p>
+                        <div className='description-p'><p>{bookDescription}</p></div>
                     </div>
                     <div className="language-container">
                         <h4>Language:</h4>

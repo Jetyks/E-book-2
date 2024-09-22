@@ -6,9 +6,11 @@
 
 .search-results-container{
     margin-left: 130px;
+    margin-right: 40px;
     top: 80px;
     position: relative;
     margin-top: 12px;
    /*  height: 540px; */
-    border: 2px solid rgba(161, 98, 56, 0.854);
+    /* border: 2px solid rgba(161, 98, 56, 0.854); */
+    /* background-color: #e3e5e5; */
 }

@@ -10,7 +10,9 @@
 }
 
 .book-details-img-container{
-    /* background-color: rgba(137, 43, 226, 0.564); */
+    display: flex;
+    justify-content: center;
+    background-color: rgba(137, 43, 226, 0.564);
     position: absolute;
     z-index: 100;
     top: 65px;
@@ -20,6 +22,8 @@
 }
 .book-details-img-container img{
     height: 100%;
+    width: 221px;
+    max-width: 250px;
     box-shadow: -19px 10px 21px -10px rgba(43, 43, 43, 0.863);
     /* width: 100%; */
    /*  opacity: 0.4; */
@@ -44,7 +48,7 @@
     /* right: 16%;
     position: absolute; */
     color: #1e1401;
-    overflow-y: scroll;
+    overflow-y: auto;
     /* border: 2px solid rgb(107, 56, 56); */
 
 }
@@ -138,14 +142,39 @@
 
 .book-description{
     padding-top: 20px;
+    /* background-color: rgba(143, 104, 179, 0.795); */
+    grid-column: 1/5;
+    grid-row: 1/15;
+    
+}
+
+.book-description h4{
+    /* position: relative; */
+    height: 10%;
+    margin-top: 8px;
    /*  background-color: rgba(143, 104, 179, 0.795); */
     grid-column: 1/5;
     grid-row: 1/15;
+    
+}
+/* .book-description::-webkit-scrollbar {
+    top: 80px;
+    width: 10px;
+  }
+  .book-description::-webkit-scrollbar-thumb {
+    background-color: rgba(130, 112, 147, 0.89);
+    border-radius: 10px;
+} */
+.description-p{
+    height: 90%;
+   /*  margin-top: 13px; */
+    overflow-y: auto;
 }
 .book-description p{
-    margin-top: 13px;
     font-family: "Fira Sans", "Exo 2";
     font-weight: 400;
+   /*  border: 2px solid gray; */
+    
 }
 
 .publisher-container{
