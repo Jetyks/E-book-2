@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     /* border: 2px solid gray; */
-    cursor: pointer;
     transition: 0.30s;
 }
 /* .card-sr-container:hover{
@@ -31,6 +30,7 @@
     border-radius: 4px;
     box-shadow: -19px 10px 21px -10px rgba(43, 43, 43, 0.863);
     transition: 0.30s;
+    cursor: pointer;
     /* border: 2px solid red; */
 }
 
@@ -52,6 +52,7 @@
     font-weight: 400;
     text-align: center;
     height: 100%;
+    cursor: pointer;
 }
 
 .book-sr-title:hover{
@@ -59,7 +60,8 @@
     color: #818383;
 }
 
-.save-book-icon-container{
+.save-book-icon-container, .saved-book-icon-container{
+    transition: opacity 0.2s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,9 +71,42 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    transition: 0.4s;
+}
+.save-book-icon-container{
+    opacity: 0;
     background-color: white;
     border: 0.8px solid black;
+    background-image: url('../../assets/img/bookmark-2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    transition: 0.4s;
 }
-.book-mark-img-sr{
-    height: 50%;
+/* .save-book-icon-container:hover{
+    background-image: url('../../assets/img/bookmark-2-white.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    background-color: #386c7c;
+    transition: 0.4s;
+} */
+
+.saved-book-icon-container{
+    opacity: 1;
+    background-color: var(--clr-green);
+    background-color: #386c7c;
+    background-image: url('../../assets/img/bookmark-2-white.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    transition: 0.4s;
+}
+
+.book-img-sr-container:hover .saved-book-icon-container,
+.book-img-sr-container:hover .save-book-icon-container {
+    opacity: 1; /* Muestra el ícono cuando se hace hover sobre el contenedor de la imagen */
 }

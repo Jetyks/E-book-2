@@ -56,6 +56,13 @@ const BooksProvider = ({ children }) => {
       localStorage.setItem('savedBooks', JSON.stringify(updatedSavedBooks))
     }
   }
+
+  const removeBook = (bookId) => {
+    const updatedSavedBooks = savedBooks.filter((book) => book.id !== bookId)
+    setSavedBooks(updatedSavedBooks)
+
+    localStorage.setItem('savedBooks', JSON.stringify(updatedSavedBooks))
+  }
   /* console.log('Libros guardados: ', savedBooks) */
   return (
     <BooksContext.Provider value={{
@@ -65,6 +72,7 @@ const BooksProvider = ({ children }) => {
       loading,
       searchTerm,
       saveBook,
+      removeBook,
       savedBooks
     }}>
       {children}

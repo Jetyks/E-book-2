@@ -5,7 +5,7 @@ import { useBooksContext } from '../../hooks/useBooksContext'
 
 function SavedBooks () {
   const { savedBooks } = useBooksContext()
-  console.log(savedBooks)
+  /*  console.log(savedBooks) */
   return (
     <>
         <div className='saved-books-text-container'>
