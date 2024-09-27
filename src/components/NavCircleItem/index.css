@@ -7,11 +7,12 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-}
-
-.nav-icon-container:hover{
     cursor: pointer;
 }
+
+/* .nav-icon-container:hover{
+    cursor: pointer;
+} */
 
 .nav-icon-container img{
     height: 60%;

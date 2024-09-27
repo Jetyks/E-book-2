@@ -2,21 +2,29 @@
 const query = 'harry potter' */
 /* const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}`; */
 const urlHome = 'https://www.googleapis.com/books/v1/volumes?q=subject:self-help&maxResults=15'
+let cachedHomeBooks = null
 
 const getHomeBooks = async () => {
+  // Verifica si los libros ya han sido almacenados previamente
+  if (cachedHomeBooks) {
+    console.log('Obteniendo libros de caché...')
+    return cachedHomeBooks
+  }
+
   try {
     const request = await fetch(urlHome)
 
     if (!request.ok) {
-      // Si el estado no es 200-299, arroja un error con el estado
       throw new Error(`Error: ${request.status} ${request.statusText}`)
     }
 
     const response = await request.json()
-    console.log('Respuesta:', response)
+    /* console.log('Respuesta:', response) */
+
+    // Guarda los libros en la variable de caché
+    cachedHomeBooks = response
     return response
   } catch (error) {
-    // Maneja el error aquí, como mostrar un mensaje en la interfaz de usuario
     console.error('Hubo un problema con la solicitud:', error)
     return null
   }

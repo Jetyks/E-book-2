@@ -16,6 +16,7 @@
 }
 
 .book-img-sr-container{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,4 +57,21 @@
 .book-sr-title:hover{
     color: var(--clr-green);
     color: #818383;
+}
+
+.save-book-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 31px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: 0.8px solid black;
+}
+.book-mark-img-sr{
+    height: 50%;
 }
