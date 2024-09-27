@@ -4,7 +4,10 @@ import { findBooks, getHomeBooks } from '../services/books'
 const BooksContext = createContext()
 
 const BooksProvider = ({ children }) => {
-  const [savedBooks, setSavedBooks] = useState([])
+  const [savedBooks, setSavedBooks] = useState(() => {
+    const saved = localStorage.getItem('savedBooks')
+    return saved ? JSON.parse(saved) : []
+  })
   const [books, setBooks] = useState([]) // Estado para almacenar todos los libros
   const [filteredBooks, setFilteredBooks] = useState([])
   const [loading, setLoading] = useState(true)
@@ -44,16 +47,14 @@ const BooksProvider = ({ children }) => {
   } */
 
   const saveBook = (book) => {
-    if (book) {
-      // Verificamos si el libro ya está en savedBooks
-      const existingBook = savedBooks.find((savedBook) => savedBook.id === book.id)
+    // Verificar si el libro ya está guardado
+    if (!savedBooks.some((savedBook) => savedBook.id === book.id)) {
+      const updatedSavedBooks = [...savedBooks, book]
+      setSavedBooks(updatedSavedBooks)
 
-      if (existingBook) {
-        console.log('El libro ya está guardado.', savedBooks)
-        return // Si ya está guardado, no lo agregamos de nuevo
-      }
+      // Guardar el nuevo estado en localStorage
+      localStorage.setItem('savedBooks', JSON.stringify(updatedSavedBooks))
     }
-    setSavedBooks((prevSavedBooks) => [...prevSavedBooks, book])
   }
   /* console.log('Libros guardados: ', savedBooks) */
   return (
