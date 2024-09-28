@@ -7,7 +7,7 @@ let cachedHomeBooks = null
 const getHomeBooks = async () => {
   // Verifica si los libros ya han sido almacenados previamente
   if (cachedHomeBooks) {
-    console.log('Obteniendo libros de caché...')
+    /* console.log('Obteniendo libros de caché...') */
     return cachedHomeBooks
   }
 
@@ -19,7 +19,7 @@ const getHomeBooks = async () => {
     }
 
     const response = await request.json()
-    /* console.log('Respuesta:', response) */
+    console.log('Respuesta:', response)
 
     // Guarda los libros en la variable de caché
     cachedHomeBooks = response

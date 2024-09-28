@@ -26,6 +26,7 @@ function SavedBooks () {
                             country={book.country}
                             language={book.language}
                             publisher={book.publisher}
+                            categories={book.categories}
                             />
                       )
                     })

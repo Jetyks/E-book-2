@@ -1,7 +1,7 @@
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import './index.css'
 
-const BookCard = ({ id, img, title, author, description, country, language, publisher }) => {
+const BookCard = ({ id, img, title, author, description, country, language, publisher, categories }) => {
   const bookTitle = `"${title}"`
   const navigate = useNavigate()
   const routeMoreInfo = 'book-details/' + id
@@ -15,7 +15,8 @@ const BookCard = ({ id, img, title, author, description, country, language, publ
         bookDescription: description,
         bookCountry: country,
         bookLanguage: language,
-        bookPublisher: publisher
+        bookPublisher: publisher,
+        bookCategories: categories
       }
     })
   }

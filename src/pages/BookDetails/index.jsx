@@ -3,7 +3,8 @@ import './index.css'
 
 function BookDetails () {
   const location = useLocation()
-  const { bookId, bookTitle, bookImg, bookAuthor, bookDescription, bookCountry, bookLanguage, bookPublisher } = location.state || {}
+  const { bookId, bookTitle, bookImg, bookAuthor, bookDescription, bookCountry, bookLanguage, bookPublisher, bookCategories } = location.state || {}
+  console.log(bookCategories)
   return (
         <div className="book-details-container">
            <div className='book-details-img-container'>
@@ -19,9 +20,13 @@ function BookDetails () {
                 {/* <div className='pdf-status-container'>
                         <h3>Available in pdf</h3>
                 </div> */}
-                <div className='category-container'>
-                        <h3>Psicologia</h3>
-                </div>
+                {
+                    bookCategories &&
+                    <div className='category-container'>
+                        <h3>{bookCategories}</h3>
+                    </div>
+                }
+
            </div>
            <div className='book-info-container'>
                 <div className="book-info">

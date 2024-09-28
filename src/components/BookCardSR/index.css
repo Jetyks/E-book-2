@@ -75,6 +75,7 @@
     background-position: center;
     background-size: 50%;
     transition: 0.4s;
+    cursor: pointer;
 }
 .save-book-icon-container{
     opacity: 0;
@@ -104,6 +105,9 @@
     background-position: center;
     background-size: 50%;
     transition: 0.4s;
+}
+.saved-book-icon-container:hover{
+    border: 0.8px solid black;
 }
 
 .book-img-sr-container:hover .saved-book-icon-container,

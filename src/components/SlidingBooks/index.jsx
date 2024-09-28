@@ -21,9 +21,9 @@ const SlidingBooks = ({ books, onSlideChange }) => {
         onSlideChange={onSlideChange}
       >
         {
-          books.slice(0, 15).map((book, index, array) => {
-            const isFirst = index === 0
-            const isLast = index === array.length - 1
+          books.slice(0, 15).map((book /* index, array */) => {
+            /* const isFirst = index === 0
+            const isLast = index === array.length - 1 */
             const author = book.volumeInfo.authors ? book.volumeInfo.authors[0] : 'Unknown Author'
             return (
                 <SwiperSlide key={book.id} className='swiper-slide-book'>
@@ -36,8 +36,9 @@ const SlidingBooks = ({ books, onSlideChange }) => {
                     country={book.saleInfo.country ? book.saleInfo.country : 'Not provided'}
                     language={book.volumeInfo.language}
                     publisher={book.volumeInfo.publisher ? book.volumeInfo.publisher : 'Not provided'}
-                    isLast={isLast}
-                    isFirst={isFirst}
+                    categories={book.volumeInfo.categories}
+                    /* isLast={isLast}
+                    isFirst={isFirst} */
                   />
                 </SwiperSlide>
             )

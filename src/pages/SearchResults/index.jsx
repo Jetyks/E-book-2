@@ -1,6 +1,6 @@
 import './index.css'
 import { ListCard } from '../../components/ListCard'
-import { useContext } from 'react'
+/* import { useContext } from 'react' */
 import { useBooksContext } from '../../hooks/useBooksContext'
 import { BookCardSR } from '../../components/BookCardSR'
 import defaultBook from '../../assets/img/default-book-img.png'
@@ -30,6 +30,7 @@ function SearchResults () {
                             country={book.saleInfo.country ? book.saleInfo.country : 'Not provided'}
                             language={book.volumeInfo.language}
                             publisher={book.volumeInfo.publisher ? book.volumeInfo.publisher : 'Not provided'}
+                            categories={book.volumeInfo.categories}
                             />
                       )
                     })
