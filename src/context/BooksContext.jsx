@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
-import { findBooks, getHomeBooks } from '../services/books'
+import { findBooksByCategory, findBooks, getHomeBooks } from '../services/books'
 
 const BooksContext = createContext()
 
@@ -42,6 +42,29 @@ const BooksProvider = ({ children }) => {
     setFilteredBooks(booksData)
     setLoading(false)
   }
+
+  const searchBooksByOneCategory = async (selectedCategory) => {
+    if (!selectedCategory) {
+      console.log('categoria no seleccionada')
+      return // Detener si no hay categoría seleccionada
+    }
+
+    try {
+      setLoading(true)
+
+      // Llamar a la función para buscar libros por categoría
+      const booksData = await findBooksByCategory(selectedCategory)
+
+      // Actualizar el estado con los libros obtenidos
+      setBooks(booksData)
+      setFilteredBooks(booksData)
+    } catch (error) {
+      console.error('Error fetching books by category:', error)
+    } finally {
+      // Asegurarse de que el estado de carga se actualiza al final
+      setLoading(false)
+    }
+  }
   /* if (filteredBooks.length > 0) {
     console.log('Respuesta:', filteredBooks)
   } */
@@ -73,7 +96,8 @@ const BooksProvider = ({ children }) => {
       searchTerm,
       saveBook,
       removeBook,
-      savedBooks
+      savedBooks,
+      searchBooksByOneCategory
     }}>
       {children}
     </BooksContext.Provider>

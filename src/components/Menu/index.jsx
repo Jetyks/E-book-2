@@ -1,5 +1,5 @@
 import './index.css'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import logo from '../../assets/img/bb-logo.png'
 import homeIcon2 from '../../assets/img/homepage.png'
@@ -57,14 +57,27 @@ function Menu () {
         })
         break
     }
-
     // Aquí podrías realizar otras acciones como aplicar estilos, hacer fetch a una API, etc.
   }, [selectedIcon])
+
+  const navigate = useNavigate()
+  const handleClickLogo = () => {
+    navigate('/')
+    setIcons({
+      home: homeIcon2White,
+      bookmark: bookMark,
+      settings: settingsIcon
+    })
+    setIsSelectedIcon('icon1')
+  }
+
   return (
         <nav>
             <div className="menu-container">
                 <div className='logo-container'>
-                    <img className='logo-png' src= {logo} alt="" />
+                    <img className='logo-png' src= {logo}
+                     alt="logo-byte-books"
+                     onClick={() => handleClickLogo()} />
                 </div>
                 <div className='nav-items-container'>
                     <div className='nav-items'>

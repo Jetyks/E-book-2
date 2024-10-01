@@ -1,10 +1,19 @@
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import './index.css'
+import { useBooksContext } from '../../hooks/useBooksContext'
 
 function BookDetails () {
   const location = useLocation()
   const { bookId, bookTitle, bookImg, bookAuthor, bookDescription, bookCountry, bookLanguage, bookPublisher, bookCategories } = location.state || {}
   console.log(bookCategories)
+  const { searchBooksByOneCategory } = useBooksContext()
+  const navigate = useNavigate()
+
+  const handleClickCategory = async (category) => {
+    const categoryString = category.join(',')
+    await searchBooksByOneCategory(categoryString) // Esperar a que se carguen los libros
+    navigate('/search-results') // Luego navegar
+  }
   return (
         <div className="book-details-container">
            <div className='book-details-img-container'>
@@ -22,7 +31,7 @@ function BookDetails () {
                 </div> */}
                 {
                     bookCategories &&
-                    <div className='category-container'>
+                    <div onClick={() => handleClickCategory(bookCategories)} className='category-container'>
                         <h3>{bookCategories}</h3>
                     </div>
                 }

@@ -33,6 +33,7 @@
 
 .logo-png{
     height: 100%;
+    cursor: pointer;
 }
 
 .nav-items-container{

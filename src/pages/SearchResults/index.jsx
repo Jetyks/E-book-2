@@ -21,7 +21,7 @@ function SearchResults () {
                       const thumbnail = book.volumeInfo.imageLinks?.thumbnail || defaultBook
                       return (
                             <BookCardSR
-                            key={book.id}
+                            key={`${book.id}-${index}`}
                             id={book.id}
                             img={thumbnail}
                             title={book.volumeInfo.title}
