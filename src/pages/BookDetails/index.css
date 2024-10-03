@@ -263,19 +263,19 @@
     font-weight: 350;
 }
 
-.country-container{
+.published-date-container{
     padding-top: 20px;
     /* background-color: rgba(14, 181, 70, 0.705); */
     grid-column: 5/8;
     grid-row: 9/13;
 }
-.country-container p{
-    font-size: 30px;
+.published-date-container p{
+    font-size: 25px;
     margin-top: 13px;
     font-family: "Fira Sans", "Exo 2";
     font-weight: 350;
 }
 
-.publisher-container, .country-container, .language-container{
+.publisher-container, .published-date-container, .language-container{
     padding-left: 100px;
 }

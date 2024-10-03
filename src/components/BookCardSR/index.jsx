@@ -4,8 +4,8 @@ import './index.css'
 /* import bookMarkWhite from '../../assets/img/bookmark-2-white.png' */
 import { useBooksContext } from '../../hooks/useBooksContext'
 
-const BookCardSR = ({ id, img, title, author, description, country, language, publisher, categories, pageCount, listPrice, maturityRating }) => {
-  const book = { id, title, img, author, description, country, language, publisher, categories, pageCount, listPrice, maturityRating }
+const BookCardSR = ({ id, img, title, author, description, country, language, publisher, categories, pageCount, listPrice, maturityRating, publishedDate }) => {
+  const book = { id, title, img, author, description, country, language, publisher, categories, pageCount, listPrice, maturityRating, publishedDate }
   const bookTitle = `"${title}"`
   const navigate = useNavigate()
   const routeMoreInfo = '/book-details/' + id
@@ -24,7 +24,8 @@ const BookCardSR = ({ id, img, title, author, description, country, language, pu
         bookCategories: categories,
         bookPagesNumber: pageCount,
         bookListPrice: listPrice,
-        bookMaturityRating: maturityRating
+        bookMaturityRating: maturityRating,
+        bookPublishedDate: publishedDate
       }
     })
   }

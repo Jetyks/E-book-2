@@ -48,6 +48,7 @@ function SearchResults () {
                                   ? 'Mature'
                                   : 'Rating not available'
                             }
+                            publishedDate = {book.volumeInfo.publishedDate ? book.volumeInfo.publishedDate : 'Not provided'}
                             />
                       )
                     })

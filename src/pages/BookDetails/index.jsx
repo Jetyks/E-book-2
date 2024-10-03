@@ -4,7 +4,7 @@ import { useBooksContext } from '../../hooks/useBooksContext'
 
 function BookDetails () {
   const location = useLocation()
-  const { bookId, bookTitle, bookImg, bookAuthor, bookDescription, bookCountry, bookLanguage, bookPublisher, bookCategories, bookPagesNumber, bookListPrice, bookMaturityRating } = location.state || {}
+  const { bookId, bookTitle, bookImg, bookAuthor, bookDescription, bookCountry, bookLanguage, bookPublisher, bookCategories, bookPagesNumber, bookListPrice, bookMaturityRating, bookPublishedDate } = location.state || {}
   console.log(bookCategories)
   const { searchBooksByOneCategory } = useBooksContext()
   const navigate = useNavigate()
@@ -43,7 +43,25 @@ function BookDetails () {
                 </div>
                 <div className='adit-features-list-container'>
                     <ul className='adit-features-list'>
-                        <li><h5>List Price:</h5><p>${bookListPrice} MXN</p></li>
+                        <li>
+                            {
+                                bookListPrice !== 'Not for sale'
+                                  ? (
+                                    <>
+                                      <h5>List Price:</h5><p>${bookListPrice} MXN</p>
+                                    </>
+                                    )
+                                  : (
+                                    <>
+                                      <h5>List Price:</h5>
+                                      <p>{bookListPrice}</p>
+                                    </>
+
+                                    )
+
+                            }
+
+                        </li>
                         <li><h5>Pages Number:</h5><p>{bookPagesNumber}</p></li>
                         <li><h5>Maturity Rating:</h5><p>{bookMaturityRating}</p></li>
                     </ul>
@@ -59,9 +77,9 @@ function BookDetails () {
                         <h4>Language:</h4>
                         <p>{bookLanguage}</p>
                     </div>
-                    <div className="country-container">
-                        <h4>Country:</h4>
-                        <p>{bookCountry}</p>
+                    <div className="published-date-container">
+                        <h4>Published Date:</h4>
+                        <p>{bookPublishedDate}</p>
                     </div>
                     <div className="publisher-container">
                         <h4>Publisher:</h4>
