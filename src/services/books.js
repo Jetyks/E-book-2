@@ -1,7 +1,8 @@
 /* const apiKey = process.env.REACT_APP_GOOGLE_BOOKS_API_KEY
 const query = 'harry potter' */
 /* const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}`; */
-const urlHome = 'https://www.googleapis.com/books/v1/volumes?q=subject:self-help&maxResults=15'
+const API_KEY = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY
+const urlHome = `https://www.googleapis.com/books/v1/volumes?q=subject:self-help&maxResults=15&key=${API_KEY}`
 let cachedHomeBooks = null
 
 const getHomeBooks = async () => {
@@ -35,8 +36,8 @@ const findBooks = async (searchTerm) => {
     return [] // Si el término de búsqueda está vacío o sólo contiene espacios, devolvemos un array vacío.
   }
 
-  const searchUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchTerm)}&orderBy=relevance&maxResults=30`
-  console.log(searchUrl)
+  const searchUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchTerm)}&orderBy=relevance&maxResults=30&key=${API_KEY}`
+  /* console.log(searchUrl) */
   try {
     const response = await fetch(searchUrl)
 
@@ -58,7 +59,7 @@ const findBooksByCategory = async (category) => {
     return [] // Si el término de búsqueda está vacío o sólo contiene espacios, devolvemos un array vacío.
   }
 
-  const searchUrl = `https://www.googleapis.com/books/v1/volumes?q=subject:${encodeURIComponent(category)}&orderBy=relevance&maxResults=40`
+  const searchUrl = `https://www.googleapis.com/books/v1/volumes?q=subject:${encodeURIComponent(category)}&orderBy=relevance&maxResults=40&key=${API_KEY}`
   console.log(searchUrl)
   try {
     const response = await fetch(searchUrl)

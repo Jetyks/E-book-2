@@ -31,6 +31,23 @@ function SearchResults () {
                             language={book.volumeInfo.language}
                             publisher={book.volumeInfo.publisher ? book.volumeInfo.publisher : 'Not provided'}
                             categories={book.volumeInfo.categories}
+                            pageCount={book.volumeInfo.pageCount}
+                            listPrice={
+                              book.saleInfo.saleability === 'NOT_FOR_SALE'
+                                ? 'Not for sale'
+                                : book.saleInfo.saleability === 'FREE'
+                                  ? 'Free'
+                                  : book.saleInfo.listPrice
+                                    ? book.saleInfo.listPrice.amount
+                                    : 'Price not available'
+                            }
+                            maturityRating={
+                              book.volumeInfo.maturityRating === 'NOT_MATURE'
+                                ? 'Not mature'
+                                : book.volumeInfo.maturityRating === 'MATURE'
+                                  ? 'Mature'
+                                  : 'Rating not available'
+                            }
                             />
                       )
                     })

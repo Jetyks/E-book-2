@@ -4,7 +4,7 @@ import { useBooksContext } from '../../hooks/useBooksContext'
 
 function BookDetails () {
   const location = useLocation()
-  const { bookId, bookTitle, bookImg, bookAuthor, bookDescription, bookCountry, bookLanguage, bookPublisher, bookCategories } = location.state || {}
+  const { bookId, bookTitle, bookImg, bookAuthor, bookDescription, bookCountry, bookLanguage, bookPublisher, bookCategories, bookPagesNumber, bookListPrice, bookMaturityRating } = location.state || {}
   console.log(bookCategories)
   const { searchBooksByOneCategory } = useBooksContext()
   const navigate = useNavigate()
@@ -36,6 +36,18 @@ function BookDetails () {
                     </div>
                 }
 
+           </div>
+           <div className='adit-features-container'>
+                <div className='adit-features-title'>
+                    <h4>Features:</h4>
+                </div>
+                <div className='adit-features-list-container'>
+                    <ul className='adit-features-list'>
+                        <li><h5>List Price:</h5><p>${bookListPrice} MXN</p></li>
+                        <li><h5>Pages Number:</h5><p>{bookPagesNumber}</p></li>
+                        <li><h5>Maturity Rating:</h5><p>{bookMaturityRating}</p></li>
+                    </ul>
+                </div>
            </div>
            <div className='book-info-container'>
                 <div className="book-info">

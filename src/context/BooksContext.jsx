@@ -86,7 +86,7 @@ const BooksProvider = ({ children }) => {
 
     localStorage.setItem('savedBooks', JSON.stringify(updatedSavedBooks))
   }
-  /* console.log('Libros guardados: ', savedBooks) */
+  console.log('Libros guardados: ', savedBooks)
   return (
     <BooksContext.Provider value={{
       books,

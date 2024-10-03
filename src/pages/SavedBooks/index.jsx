@@ -27,6 +27,9 @@ function SavedBooks () {
                             language={book.language}
                             publisher={book.publisher}
                             categories={book.categories}
+                            pageCount={book.pageCount}
+                            listPrice={book.listPrice}
+                            maturityRating={book.maturityRating}
                             />
                       )
                     })
