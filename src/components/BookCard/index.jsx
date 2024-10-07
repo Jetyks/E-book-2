@@ -17,7 +17,7 @@ const BookCard = ({ id, img, title, author, description, country, language, publ
         bookLanguage: language,
         bookPublisher: publisher,
         bookCategories: categories,
-        pagesNumber: pageCount,
+        bookPagesNumber: pageCount,
         bookListPrice: listPrice,
         bookMaturityRating: maturityRating,
         bookPublishedDate: publishedDate

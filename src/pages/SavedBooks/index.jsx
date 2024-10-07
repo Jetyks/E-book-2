@@ -24,12 +24,19 @@ function SavedBooks () {
                             author={book.author}
                             description={book.description}
                             country={book.country}
-                            language={book.language}
+                            language={
+                              book.language === 'es'
+                                ? 'Spanish'
+                                : book.language === 'en'
+                                  ? 'English'
+                                  : book.language
+                            }
                             publisher={book.publisher}
                             categories={book.categories}
                             pageCount={book.pageCount}
                             listPrice={book.listPrice}
                             maturityRating={book.maturityRating}
+                            publishedDate={book.publishedDate}
                             />
                       )
                     })

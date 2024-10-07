@@ -28,7 +28,13 @@ function SearchResults () {
                             author={author}
                             description={book.volumeInfo.description ? book.volumeInfo.description : 'Description not provided'}
                             country={book.saleInfo.country ? book.saleInfo.country : 'Not provided'}
-                            language={book.volumeInfo.language}
+                            language={
+                              book.volumeInfo.language === 'es'
+                                ? 'Spanish'
+                                : book.volumeInfo.language === 'en'
+                                  ? 'English'
+                                  : book.volumeInfo.language
+                            }
                             publisher={book.volumeInfo.publisher ? book.volumeInfo.publisher : 'Not provided'}
                             categories={book.volumeInfo.categories}
                             pageCount={book.volumeInfo.pageCount}

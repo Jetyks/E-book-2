@@ -62,7 +62,7 @@ function BookDetails () {
                             }
 
                         </li>
-                        <li><h5>Pages Number:</h5><p>{bookPagesNumber}</p></li>
+                        <li><h5>Pages Number:</h5><p>{bookPagesNumber || 'not provided'}</p></li>
                         <li><h5>Maturity Rating:</h5><p>{bookMaturityRating}</p></li>
                     </ul>
                 </div>
@@ -79,7 +79,7 @@ function BookDetails () {
                     </div>
                     <div className="published-date-container">
                         <h4>Published Date:</h4>
-                        <p>{bookPublishedDate}</p>
+                        <p>{bookPublishedDate || 'not provided'}</p>
                     </div>
                     <div className="publisher-container">
                         <h4>Publisher:</h4>
